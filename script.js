@@ -3,22 +3,35 @@ chineseTerms = [['zhongwen', 'zhong1wen2', 'Chinese'],
 ['long', 'long2', 'dragon'],
 ['shafa', 'sha1fa1', 'sofa'],];
 
-let randomNumber = Math.floor(Math.random() * 4);
 
-cardText = document.getElementById("card");
-document.getElementById("chinese").addEventListener("click", function () { chineseTerm(randomNumber); });
-document.getElementById("pinyin").addEventListener("click", function () { pinyinTerm(randomNumber); });
-document.getElementById("english").addEventListener("click", function () { englishTerm(randomNumber); });
+const cardText = document.getElementById("card");
+const newBtn = document.getElementById("new");
+const chineseBtn = document.getElementById("chinese");
+const pinyinBtn = document.getElementById("pinyin");
+const englishBtn = document.getElementById("english");
+
+let term = [];
 
 
-
-
-function chineseTerm(term) {
-    cardText.innerHTML = chineseTerms[term][0];
+function generateTerm() {
+    let randomNumber = Math.floor(Math.random() * chineseTerms.length);
+    term = chineseTerms[randomNumber];
+    console.log(term);
 }
-function pinyinTerm(term) {
-    cardText.innerHTML = chineseTerms[term][1];
+generateTerm();
+
+function showChinese() {
+    cardText.innerHTML = term[0];
 }
-function englishTerm(term) {
-    cardText.innerHTML = chineseTerms[term][2];
+function showPinyin() {
+    cardText.innerHTML = term[1];
 }
+function showEnglish() {
+    cardText.innerHTML = term[2];
+}
+
+newBtn.addEventListener("click", generateTerm);
+chineseBtn.addEventListener("click", showChinese);
+pinyinBtn.addEventListener("click", showPinyin);
+englishBtn.addEventListener("click", showEnglish);
+
