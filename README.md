@@ -10,3 +10,5 @@ The script has a built in array of Chinese terms with a nested array for each te
 
 What I want it to do: 
 I would like to be able to store lists of terms in a back-end database, that the user can pull out as they please. I would like them to be able to add new terms or lists, both through a UI for the application, or by uploading a CSV or excel file. I would like to add functionality to show the part of speech if the user chooses. I would like to add another function to change the color of the pinyin to match the tones if the user chooses. I would like to overhaul the UI for the entire application to make it cleaner, prettier, and more user friendly. 
+
+Live: https://thequiltingriverotter.github.io/Chinese-Flashcards/

@@ -32,6 +32,7 @@ let term = [];
 function generateTerm() {
     let randomNumber = Math.floor(Math.random() * chineseTerms.length);
     term = chineseTerms[randomNumber];
+    showChinese();
 }
 generateTerm();
 
